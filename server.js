@@ -5,13 +5,6 @@ import * as db from './components/db.js';
 app.use(express.static('./client'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// error handler middleware
-
-// const tempList = [
-//     { name: 'Broccoli', type: 'Vegetable', description: 'A crufierous vegetable'},
-//     { name: 'Ribeye Steak', type: 'Meat', description: 'A fatty and medium flavoured cut of beef'},
-//     { name: 'New York Strip Steak', type: 'Meat', description: 'A less fatty and extremely flavourful cut of beef'}
-// ]
 
 app.get('/api/get', (req, res, next) => {
     db.getAll()
@@ -35,7 +28,5 @@ app.delete('/api/delete', (req, res, next) => {
         })
         .catch(next);
 });
-
-// db.checkForDuplicate('Tofu');
 
 app.listen(3000, () => console.log('app listening on port 3000'));
