@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONGOOSE EXPRESS TEST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card form-card">
+        <form id="addItemForm" class="input-form" action="/api/post" method="POST">
+            <div class="form-group">
+                <label for="name">Food Name:</label>
+                <input type="text" id="name" name="name" required >
+            </div>
+            <div class="form-group">
+                <label for="type">Food Type:</label>
+                <input type="text" id="type" name="type" required >
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required >
+            </div>
+            <button class="btn btn-primary" id="submitButton">Add to database</button>
+        </form>
+    </div>
+    <div class="card mt-2">
+        <h3>Database content</h3>
+        <ul id="dataList"></ul>
+    </div>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

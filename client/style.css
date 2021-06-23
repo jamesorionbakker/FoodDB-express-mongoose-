@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin-top: 25px;
+    background: darkslategray;
+    font-family: Raleway;
+
+}
+.card{
+    padding: 50px;
+    background: white;
+    width: 100vw;
+    max-width: 600px;
+    margin: auto;
+}
+form.input-form input {
+    width: 100%;
+}
+a.delete-item {
+    font-size: .7em;
+}
